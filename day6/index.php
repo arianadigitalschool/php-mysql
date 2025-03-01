@@ -35,6 +35,6 @@
     // flose($h);
 
     //file_put_contents is identic to fopen(), fwrite(), fclose()
-    file_put_contents("test.txt", "Add more text");
-    echo file_get_contents("test.txt");
+    //file_put_contents("test.txt", "Add more text");
+    //echo file_get_contents("test.txt");
 ?>
