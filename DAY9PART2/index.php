@@ -1,9 +1,12 @@
 <?php
     include_once('config.php');
+    $id = $_GET['id'];
 
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM users WHERE id=:id";
 
     $getUsers = $connect->prepare($sql);
+
+    $getUsers->bindParam(':id', $id);
 
     $getUsers->execute();
 
@@ -45,6 +48,7 @@
                         <td><?= $user['name']?> </td>
                         <td><?= $user['username']?> </td>
                         <td><?= $user['email']?> </td>
+                        <td><?="<a href = 'delete.php?id=$user[id]'>Delete</a>| <a href = 'edit.php?id=$user[id]'>Edit</a>" ?></td>
                     </tr>
                     <?php
                 }
