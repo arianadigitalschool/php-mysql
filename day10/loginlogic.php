@@ -12,7 +12,7 @@
             header("refresh:2 url=signin.php");
         }else{
             $sql = "SELECT * FROM users WHERE username = :username";
-            $insertSQL = $conn->prepare($sql);
+            $insertSQL = $connect->prepare($sql);
             $insertSQL->bindParam(':username', $username);
             $insertSQL->execute();
 

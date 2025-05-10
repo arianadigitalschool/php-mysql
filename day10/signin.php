@@ -11,7 +11,7 @@
 
 <div class="container mt-5">
   <h2 class="mb-4">Login</h2>
-  <form action="dashboard.php" method="post"> <!-- Change action to your PHP handling file -->
+  <form action="loginlogic.php" method="post"> <!-- Change action to your PHP handling file -->
     <div class="mb-3">
       <label for="username" class="form-label">Username</label>
       <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
@@ -22,7 +22,7 @@
       <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
     </div>
 
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary" name="submit">Login</button>
 
     <p class="mt-3">Don't have an account? <a href="signupform.php">Sign up here</a></p>
   </form>
